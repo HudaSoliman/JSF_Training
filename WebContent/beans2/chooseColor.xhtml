@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:body>
+	<h:form>
+	Choose Color 1:<br />
+		<h:selectOneMenu value="#{colors3.color1}">
+			<f:selectItems value="#{colorOptions.colorNames}" />
+		</h:selectOneMenu>
+		<br />
+		<br />
+Choose Color 2:<br />
+		<h:selectOneListbox value="#{colors3.color2}">
+			<f:selectItems value="#{colorOptions.colorValues}" />
+		</h:selectOneListbox>
+		<br />
+		<br />
+Choose Color 3:<br />
+		<h:selectOneRadio value="#{colors3.color3}">
+			<f:selectItems value="#{colorOptions.colorMap}" />
+		</h:selectOneRadio>
+		<br />
+		<br />
+Choose Color 4:<br />
+		<h:selectOneListbox value="#{colors3.color4}">
+			<f:selectItems value="#{colorOptions.colorList}" var="color"
+				itemLabel="#{color.name}" itemValue="#{color.value}" />
+		</h:selectOneListbox>
+		<br />
+		<br />
+		<h:commandButton action="#{colors3.showColors}"
+			value="Show Selected Colors" />
+	</h:form>
+</h:body>
+</html>
